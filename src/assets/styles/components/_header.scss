@@ -1,0 +1,64 @@
+@use '../var';
+@use '../mixin';
+
+
+.aside {
+    width: 100%;   
+    @include mixin.h2Shadow;
+    @include mixin.h2Section;
+
+    &__title {
+        font-size: 2rem;
+        @include mixin.whiteTitle;
+        margin:0.5rem;
+
+    }
+
+    &__desc {
+        color:var.$bgHeader;
+        font-weight: bold;
+        font-size: 1.3rem;
+        opacity: unset;
+        margin:0.5rem;
+        }
+    }
+.h1{
+    display: flex; 
+    width: 32%;
+    height: 15%;
+    padding: 2rem;
+}
+    h1 {    
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+        @include mixin.whiteTitle;
+        @include mixin.textShadow;
+    }
+.em{
+    font-style: italic;
+    font-weight: 1rem;
+    color:var.$bgHeader;
+}
+
+.font{
+margin-top:auto;
+margin-bottom:auto;
+
+}
+.nav{ 
+    text-align: right;
+    margin-bottom:2rem;
+&__a{
+        
+        color:var.$bgHeader;
+        text-decoration: none;
+        margin-right:2rem;
+        @include mixin.textShadow; 
+    }
+    
+}
+img{
+    padding:1rem;
+    margin:1rem;
+}

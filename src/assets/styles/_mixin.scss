@@ -1,0 +1,71 @@
+@use './var';
+
+
+//header position verticale a tester
+@mixin verticalPict {
+    background-image: url("../images/nicole.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: calc(120%);
+    position: fixed;
+}
+
+//titres
+@mixin whiteTitle{
+    color:#fff;
+    font-weight: bold;
+}
+@mixin blackTitle{
+    color:#000;
+    font-weight: bold;
+    text-align: left;
+}
+@mixin fixedHeader{
+    position: fixed;
+}
+@mixin h2Section{
+    background-color:rgba($color: #ffffffeb, $alpha: 0.3);
+    width:80%;
+    text-align: right;
+    padding:1rem;
+    margin:auto;
+    padding: 1rem;
+    
+    
+}
+@mixin h2Shadow{
+    &:hover{
+        text-shadow: rgba($color: #000, $alpha: 1.0) 2px 3px 2px ;
+    box-shadow: rgba($color: var.$fontBox, $alpha: 0.9) 0px 7px 7px ;
+    color:rgba($color: #000, $alpha: 1.0);
+    background-color: rgba($color: var.$bgHeader, $alpha: 0.5);
+    border-radius:0.3rem;
+}
+}
+@mixin textShadow{
+    &:hover{
+    color:rgba($color: #000, $alpha: 1.0);
+    font-weight: bolder;
+    text-shadow: rgba($color: var.$bgHeader, $alpha: 1.0) 2px 3px 2px ;
+}
+}
+
+//btn choise color
+
+@mixin btnColor($color){
+    background-color:($color) ;
+    border:0.5rem solid ($color);
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#fff;
+    padding:0.1rem;  
+}
+
+
+//liens
+@mixin hoverLien{
+    &:hover{
+        color:var.$lienHover;
+    }
+}

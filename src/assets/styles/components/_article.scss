@@ -1,0 +1,74 @@
+@use '../var';
+@use '../mixin';
+
+.section{
+    display:flex;
+}
+.article {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    max-height: 100%;
+    padding: 1rem;
+    border: 0.1rem solid var.$borderArt;
+
+    &__btnNews {
+        @include mixin.btnColor(var.$newsBtn);
+    }
+
+    &__btnTeam {
+        @include mixin.btnColor(var.$teamBtn);
+    }
+
+    &__btnWork {
+        @include mixin.btnColor(var.$workBtn);
+
+    }
+
+    &__redac {
+        display: flex;
+        flex-direction: row;
+        font-weight: bold;
+        flex-wrap: nowrap;
+    }
+
+&__read {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+&__lien {
+    color: var.$lienColor;
+    @include mixin.hoverLien;
+    font-weight: bolder;
+}
+}
+h3 {
+    position:fixed;
+    font-size: 2rem;
+    margin: 0;
+    background-color: var.$borderArt;
+    @include mixin.blackTitle;
+    height: 10%;
+    width: 100%;
+    text-align: left;
+    padding:1rem 1rem 0rem 1rem;
+    border-bottom:0.1 solid var.$borderArt;
+    margin-bottom:2rem;
+}
+
+
+h4 {
+    @include mixin.blackTitle;
+    font-size: 1.4rem;
+}
+
+span {
+    font-size: 0.6rem;
+    color: var.$fontBox;
+}
+img{
+    width:6rem;
+    height:6rem;
+    margin-right:.5rem;
+}

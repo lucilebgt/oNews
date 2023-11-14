@@ -1,0 +1,46 @@
+@use './var';
+@use './mixin';
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+body {
+    position: absolute;
+    font-size: 1rem;
+    margin: 0;
+    background-color: var.$bgHeader;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+
+    width: 50%;
+    height: 102%;
+    float: left;
+    display: flex;
+    flex-flow: column wrap;
+    position: fixed;
+    @include mixin.verticalPict;
+    @include mixin.fixedHeader;
+
+}
+
+main {
+
+    max-width: 50%;
+    max-height: 100%;
+    float: right;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-left:3rem;
+    padding-left: 2rem;
+}
